@@ -6,12 +6,11 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 13:07:17 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/07 13:43:08 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/07 13:44:36 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int	isalpha(int	c)
+int	isalpha(int c)
 {
 	if ((c >= 101 && c <= 132) || (c >= 141 && c <= 172))
 		return (1);
