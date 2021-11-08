@@ -6,11 +6,11 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 13:11:32 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/07 13:59:36 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/08 20:38:20 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c - 48 < 0 || c - 48 > 9)
 		return (0);
