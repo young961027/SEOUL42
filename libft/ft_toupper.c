@@ -6,11 +6,14 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 20:35:32 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/08 20:36:50 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/08 20:40:12 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	else
+		return (c);
 }
