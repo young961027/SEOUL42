@@ -6,11 +6,11 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 19:08:22 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/08 19:14:17 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/08 20:37:48 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if (c >= 60 && c <= 71)
 		return (1);
