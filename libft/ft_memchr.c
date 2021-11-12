@@ -6,25 +6,27 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 18:35:45 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/12 17:20:25 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/13 01:02:49 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*ch;
+	unsigned char	*str;
+	unsigned char	ch;
 	size_t			i;
 
-	ch = (unsigned char *)s;
+	str = (unsigned char *)s;
+	ch = (unsigned char)c;
 	i = 0;
 	while (i < n)
 	{
-		if (*ch == (unsigned char)c)
-			return (ch);
+		if (*str == ch)
+			return ((void *)str);
 		else
-			ch++;
-	}
+			str++;
+	}	
 	return (0);
 }
