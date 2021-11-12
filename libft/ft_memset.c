@@ -6,13 +6,15 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:16:00 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/11 16:28:25 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/12 15:58:39 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	*memset(void *b, int c, size_t len)
 {
-	size_t	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i <= len)

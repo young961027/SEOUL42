@@ -6,9 +6,11 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:10:03 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/11 16:11:32 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/12 15:57:45 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	isprint(int c)
 {

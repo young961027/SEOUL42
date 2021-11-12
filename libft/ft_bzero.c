@@ -6,9 +6,11 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 17:22:30 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/11 17:25:30 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/12 15:59:01 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

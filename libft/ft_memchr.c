@@ -6,9 +6,11 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 18:35:45 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/11 18:43:16 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/12 15:58:49 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*memchr(const void *s, int c, size_t n)
 {

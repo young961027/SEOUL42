@@ -6,9 +6,11 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 15:18:17 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/11 15:28:14 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/12 15:58:01 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*strrchr(const char *string, int c)
 {

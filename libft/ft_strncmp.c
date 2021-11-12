@@ -6,9 +6,11 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 16:29:03 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/11 17:14:48 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/12 15:58:29 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

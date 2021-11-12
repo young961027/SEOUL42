@@ -6,9 +6,11 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 15:31:39 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/11 15:34:03 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/12 15:58:16 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
