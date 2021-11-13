@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 15:18:17 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/12 16:49:31 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/13 14:23:36 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*result;
-	int		i;
+	size_t		i;
 
-	i = 0;
+	i = ft_strlen(s) - 1;
+	if (c == 0)
+		return ((char *)s + i + 1);
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
-			result = (char *)s + i;
+		if (s[i] == (char)c)
+			return ((char *)s + i);
 		else
-			i++;
+			i--;
 	}
-	return (result);
+	return (0);
 }
