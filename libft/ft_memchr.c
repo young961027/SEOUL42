@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 18:35:45 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/13 01:02:49 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/13 13:36:34 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		if (*str == ch)
 			return ((void *)str);
 		else
+		{
+			i++;
 			str++;
+		}
 	}	
 	return (0);
 }
