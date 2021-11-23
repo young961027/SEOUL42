@@ -6,13 +6,11 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:43:56 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/20 16:47:44 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/23 15:30:40 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
