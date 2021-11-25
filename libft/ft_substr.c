@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:36:21 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/25 19:25:29 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/25 19:45:21 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	slen;
-	size_t	i;
+	int		i;
 	char	*sub;
 
 	slen = ft_strlen(s);
@@ -30,13 +30,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sub[0] = '\0';
 		return (sub);
 	}
-	i = 0;
-	while (i < len)
+	i = -1;
+	while (++i < (int)len)
 	{
-		sub[i] = s[i + (size_t)start];
-		if (s[i + (size_t)start] == '\0')
+		sub[i] = s[(int)(i + start)];
+		if (s[(int)(i + start)] == '\0')
 			return (sub);
-		i++;
 	}
 	sub[i] = '\0';
 	return (sub);
