@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: inyancat <inyancat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/13 14:26:44 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/26 21:50:23 by yohwang          ###   ########.fr       */
+/*   Created  2016/11/11 16:47:32 by inyancat          #+#    #+#             */
+/*   Updated  2016/11/12 20:21:42 by inyancat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "utils.h"
+#include <stdarg.h>
+extern int g_log_fd;
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void error(int code, int a, const char *pattern, ...)
 {
-	unsigned char	*cdst;
-	unsigned char	*csrc;
+	va_list	va;
 
-	cdst = (unsigned char *)dst;
-	csrc = (unsigned char *)src;
-	while (n--)
-		*cdst++ = *csrc++;
-	return ((void *)cdst);
+	va_start(va, pattern);
+	(void)a;
+	vdprintf(g_log_fd, pattern, va);
+	dprintf(g_log_fd, "\n");
+	va_end(va);
+	exit(code);
 }
