@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 15:18:17 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/13 14:23:36 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/27 15:53:39 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ char	*ft_strrchr(const char *s, int c)
 		if (s[i] == (char)c)
 			return ((char *)s + i);
 		else
-			i--;
+			if (i == 0)
+				return (0);
+			else
+				i--;
 	}
 	return (0);
 }
