@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 13:48:08 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/20 16:48:11 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/27 14:40:41 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*csrc;
 	size_t			i;
 
+	if (dst == 0 && src == 0)
+		return (0);
 	cdst = (unsigned char *)dst;
 	csrc = (unsigned char *)src;
 	if (dst > src)

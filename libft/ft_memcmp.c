@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:43:56 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/23 15:30:40 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/27 14:29:36 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		len1 += (int)c1[i];
-		len2 += (int)c2[i];
+		len1 += c1[i];
+		len2 += c2[i];
+		if (c1[i] == '\0' || c2[i] == '\0')
+			break ;
 		i++;
 	}
 	return (len1 - len2);
