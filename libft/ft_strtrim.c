@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 17:08:01 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/26 18:34:51 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/28 20:29:43 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static size_t	count_back(char const *s1, char const *set)
 	back = 0;
 	while (ft_strchr(set, s1[ft_strlen(s1) - i - 1]) != 0)
 	{
-		if (s1[ft_strlen(s1) - i - 1] == '\0')
+		if (ft_strlen(s1) - i - 1 == 0)
 			break ;
 		back++;
 		i++;
@@ -58,7 +58,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if ((int)(ft_strlen(s1) - front - back + 1) < 0)
 		s = malloc(1);
 	else
-		s = malloc(ft_strlen(s1) - front - back);
+		s = malloc(ft_strlen(s1) - front - back + 1);
 	if (!s)
 		return (0);
 	i = 0;
