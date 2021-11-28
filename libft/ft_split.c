@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 18:42:24 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/27 21:54:36 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/28 15:47:06 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,15 @@ static size_t	count_char(char const *s, char c)
 
 static char	*fill_word(char const *s, size_t i, size_t j)
 {
-	cha
+	char	*word;
 	size_t	idx;
 	size_t	len;
 
 	idx = 0;
 	len = i - j;
-
+	word = malloc(len + 1);
+	if (!word)
+		return (0);
 	while (idx < len)
 	{
 		word[idx] = s[idx + j];
@@ -50,29 +52,28 @@ char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	char	*word;
-	size_t	count;
 	size_t	i;
 	size_t	j;
 
 	i = 0;
 	j = 0;
-	count = 0;
 	tab = malloc(sizeof(char *) * (count_char(s, c) + 2));
+	if (!tab)
+		return (0);
 	while (s[i] != '\0')
 	{
 		while (s[i] != c && s[i] != '\0')
 			i++;
 		if ((int)(i - j) > 0)
 		{
-			word = malloc(i - j + 1);
+			word = fill_word(s, i, j);
 			if (!word)
 				return (0);
-			word = fill_word(s, i, j, word);
-			tab[count] = word;
-			count++;
+			*tab = word;
+			tab++;
 		}
 		j = ++i;
 	}
-	tab[count] = 0;
+	*tab = 0;
 	return (tab);
 }	
