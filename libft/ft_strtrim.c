@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 17:08:01 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/28 20:29:43 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/29 16:18:31 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	back;
 	char	*s;
 
+	if (!s1)
+		return (0);
 	front = count_front(s1, set);
 	back = count_back(s1, set);
 	if ((int)(ft_strlen(s1) - front - back + 1) < 0)
