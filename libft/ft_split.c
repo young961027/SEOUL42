@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 18:42:24 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/29 16:03:26 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/29 16:37:19 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,18 @@ static size_t	count_char(char const *s, char c)
 
 	i = 0;
 	count = 0;
+	if (c == 0)
+		return (1);
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
 		{
 			if (i != 0 && s[i - 1] != c)
-				count++;
-			else
+			{
+				if (i != ft_strlen(s) - 1)
+					count++;
+			}
+			else if (i == 0)
 				count++;
 		}
 		i++;
@@ -44,7 +49,7 @@ static char	*fill_word(char const *s, size_t *idx, char **tab)
 	word = malloc(len + 1);
 	if (!word)
 	{
-		while (i < idx[2])
+		while (i < idx[2] - 1)
 			free(tab[i++]);
 		free(tab);
 		return (0);
@@ -79,7 +84,7 @@ char	**ft_split(char const *s, char c)
 	tab = malloc(sizeof(char *) * (count_char(s, c) + 1));
 	if (!tab)
 		return (0);
-	while (s[idx[0]] != '\0')
+	while (idx[0] < ft_strlen(s))
 	{
 		while (s[idx[0]] != c && s[idx[0]] != '\0')
 			idx[0]++;
