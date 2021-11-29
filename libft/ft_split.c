@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 18:42:24 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/28 15:47:06 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/11/29 16:03:26 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,58 +22,76 @@ static size_t	count_char(char const *s, char c)
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
-			count++;
+		{
+			if (i != 0 && s[i - 1] != c)
+				count++;
+			else
+				count++;
+		}
 		i++;
 	}
 	return (count);
 }
 
-static char	*fill_word(char const *s, size_t i, size_t j)
+static char	*fill_word(char const *s, size_t *idx, char **tab)
 {
 	char	*word;
-	size_t	idx;
+	size_t	i;
 	size_t	len;
 
-	idx = 0;
-	len = i - j;
+	i = 0;
+	len = idx[0] - idx[1];
 	word = malloc(len + 1);
 	if (!word)
-		return (0);
-	while (idx < len)
 	{
-		word[idx] = s[idx + j];
-		idx++;
+		while (i < idx[2])
+			free(tab[i++]);
+		free(tab);
+		return (0);
 	}
-	word[idx] = '\0';
+	while (i < len)
+	{
+		word[i] = s[i + idx[1]];
+		i++;
+	}
+	word[i] = '\0';
 	return (word);
+}
+
+static void	ft_zero(size_t *idx)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < 3)
+		idx[i++] = 0;
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	char	*word;
-	size_t	i;
-	size_t	j;
+	size_t	idx[3];
 
-	i = 0;
-	j = 0;
-	tab = malloc(sizeof(char *) * (count_char(s, c) + 2));
+	if (!s)
+		return (0);
+	ft_zero(idx);
+	tab = malloc(sizeof(char *) * (count_char(s, c) + 1));
 	if (!tab)
 		return (0);
-	while (s[i] != '\0')
+	while (s[idx[0]] != '\0')
 	{
-		while (s[i] != c && s[i] != '\0')
-			i++;
-		if ((int)(i - j) > 0)
+		while (s[idx[0]] != c && s[idx[0]] != '\0')
+			idx[0]++;
+		if ((int)(idx[0] - idx[1]) > 0)
 		{
-			word = fill_word(s, i, j);
+			word = fill_word(s, idx, tab);
 			if (!word)
 				return (0);
-			*tab = word;
-			tab++;
+			tab[idx[2]++] = word;
 		}
-		j = ++i;
+		idx[1] = ++idx[0];
 	}
-	*tab = 0;
+	tab[idx[2]] = 0;
 	return (tab);
-}	
+}
