@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 15:34:32 by yohwang           #+#    #+#             */
-/*   Updated: 2021/12/02 16:48:25 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/12/02 17:01:53 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-
 char	**ft_split(char const *s, char c);
 
 void	ft_bzero(void *s, size_t n);
@@ -48,4 +47,5 @@ void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_calloc(size_t count, size_t size);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 #endif
