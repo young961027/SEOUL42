@@ -1,3 +1,4 @@
 ./test/
 ./libft/tester/
+./libft/war_machine/*
 .DS_store

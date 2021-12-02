@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 20:03:16 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/27 20:10:32 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/12/02 20:19:39 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,10 @@ int	ft_atoi(const char *str)
 	i = 0;
 	minus = 1;
 	s = (char *)str;
-	while (s[i] == 32 || (s[i] >= 9 && s[i] <= 13) || s[i] == 0)
+	while (s[i] == 32 || (s[i] >= 9 && s[i] <= 13))
 		i++;
+	if (s[i] == '\0')
+		return (0);
 	if (s[i] == '-' || s[i] == '+')
 		minus = is_minus(s[i++]);
 	while (ft_isdigit(s[i]) && s[i] != '\0')
