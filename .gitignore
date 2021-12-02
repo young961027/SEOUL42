@@ -1,4 +1,4 @@
-./test/
-./libft/tester/
-./libft/war_machine/*
+test/
+tester/
+war_machine/
 .DS_store
