@@ -6,7 +6,7 @@
 #    By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/24 14:34:56 by yohwang           #+#    #+#              #
-#    Updated: 2021/12/02 21:36:58 by yohwang          ###   ########.fr        #
+#    Updated: 2021/12/02 21:41:41 by yohwang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRC			= ft_isalpha.c ft_toupper.c ft_isdigit.c ft_tolower.c ft_isalnum.c\
 			  ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c\
 			  ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c\
 			  ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
+			  ft_putnbr_fd.c
 
 #SRC			=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c\
 	ft_memmove.c ft_memchr.c ft_memcmp.c ft_strlen.c\
