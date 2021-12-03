@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 18:42:24 by yohwang           #+#    #+#             */
-/*   Updated: 2021/11/29 16:37:19 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/12/03 19:18:22 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,15 @@ static size_t	count_char(char const *s, char c)
 		return (1);
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] != c)
 		{
-			if (i != 0 && s[i - 1] != c)
-			{
-				if (i != ft_strlen(s) - 1)
-					count++;
-			}
-			else if (i == 0)
-				count++;
+			count++;
+			i++;
+			while (s[i] != c && s[i] != '\0')
+				i++;
 		}
+		if (s[i] == '\0')
+			return (count);
 		i++;
 	}
 	return (count);
