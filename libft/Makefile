@@ -20,10 +20,10 @@ SRC			= ft_isalpha.c ft_toupper.c ft_isdigit.c ft_tolower.c ft_isalnum.c\
 			  ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
 			  ft_putnbr_fd.c
 OBJ			=	$(SRC:.c=.o)
-BSRC		=	ft_lstnew.c ft_lstadd_front.c 
-#ft_lstsize.c ft_lstlast.c\
-	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
-	ft_lstmap.c
+BSRC		=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c\
+# 				ft_lstlat.c\
+				ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
+				ft_lstmap.c
 BOBJ		=	$(BSRC:.c=.o)
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
@@ -38,8 +38,8 @@ $(NAME):	$(OBJECTS)
 	ar -rc $@ $^
 bonus:
 	@make WITH_BONUS=1 all
-	*.o:		*.c
-	$(CC) $(CFLAGS) -c $< -o $@
+%.o:		%.c
+	$(CC) $(CFLAGS) -c -o $@ $<
 clean:
 	@rm -f $(OBJ) $(BOBJ)
 fclean:		clean
