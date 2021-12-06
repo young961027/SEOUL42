@@ -2,3 +2,4 @@ test/
 tester/
 war_machine/
 .DS_store
+.idea/
