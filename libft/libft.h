@@ -6,7 +6,7 @@
 /*   By: yohwang <yohwang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 15:34:32 by yohwang           #+#    #+#             */
-/*   Updated: 2021/12/02 21:41:25 by yohwang          ###   ########.fr       */
+/*   Updated: 2021/12/06 17:17:48 by yohwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ t_list	*ft_lstnew(void *content);
 //t_list	*ft_lstlast(t_list *lst);
 //t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 //
-//void 	ft_lstadd_front(t_list **lst, t_list *new);
+void 	ft_lstadd_front(t_list **lst, t_list *new);
 //void	ft_lstadd_back(t_list **lst, t_list *new);
 //void 	ft_lstdelone(t_list *lst, void (*del)(void *));
 //void	ft_lstclear(t_list **lst, void (*del)(void *));
